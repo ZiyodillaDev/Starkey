@@ -1,17 +1,19 @@
 {
-  "name": "nuxt-app",
-  "type": "module",
+  "name": "hearingcare-nuxt-full",
   "private": true,
+  "type": "module",
   "scripts": {
-    "build": "nuxt build",
     "dev": "nuxt dev",
-    "generate": "nuxt generate",
+    "build": "nuxt build",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "clean": "rimraf .nuxt node_modules"
   },
   "dependencies": {
-    "nuxt": "^4.1.1",
-    "vue": "^3.5.20",
-    "vue-router": "^4.5.1"
+    "nuxt": "latest",
+    "@nuxtjs/tailwindcss": "^6.12.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4",
+    "rimraf": "^6.0.1"
   }
 }

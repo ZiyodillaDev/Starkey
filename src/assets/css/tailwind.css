@@ -1,0 +1,14 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+}
+.burger { display:inline-flex; flex-direction:column; gap:4px; }
+.burger span { width:22px; height:2px; background:#111; display:block; }
+.header__inner-menu.is-open { display:block; }
+@media (min-width: 768px) {
+  .header__inner-menu { display:block !important; }
+}

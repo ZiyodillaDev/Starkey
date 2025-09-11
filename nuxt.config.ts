@@ -1,5 +1,21 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import { defineNuxtConfig } from "nuxt/config";
+
 export default defineNuxtConfig({
-  compatibilityDate: '2025-07-15',
-  devtools: { enabled: true }
-})
+  devtools: { enabled: true },
+  modules: ["@nuxtjs/tailwindcss"],
+  srcDir: "src",
+  app: {
+    head: {
+      title: "HearingCare — Full Site",
+      meta: [
+        { name: "viewport", content: "width=device-width, initial-scale=1" },
+        {
+          name: "description",
+          content: "Demo site for hearing solutions (Nuxt 3 + Tailwind).",
+        },
+      ],
+      link: [{ rel: "icon", type: "image/svg+xml", href: "/favicon.svg" }],
+    },
+  },
+  nitro: { preset: "node-server" },
+});
